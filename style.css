@@ -1,9 +1,12 @@
-/*RESET*/
+/*RESET====================*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+a {
+    text-decoration: none;
 }
 
 img {
@@ -11,15 +14,51 @@ img {
     height: auto;
 }
 
+/*================= variaveis ====================*/
 :root {
+    --hue: 159;
+
+    /*HLS color mode */
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hls(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
+}  
+
+/*================= Base ====================*/
+body {
+    font: 400 1rem "DM Sans", sans-serif;
+    color: var(--text-color) ;
+    background: var(--body-color) ;
+    -webkit-font-smoothing: antialiased;
+}
+h1 {
+    
+    font: 700 1.875rem 'Poppins', sans-serif;
+    color: var(--title-color);
+    -webkit-font-smoothing: antialiased;
     
 }
+
+.button {
+    color: var(--color);
+}
+
+
+/*================= layout ====================*/    
+
 #header {
-   height: 4.5rem; 
+   
 }
 
 nav {
+    
+    height: 4.5rem;
     display: 4.5rem;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -27,7 +66,7 @@ nav {
 
 }
 .container {
-    width: 90%;
+    width: 100%;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
